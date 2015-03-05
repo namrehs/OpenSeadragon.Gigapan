@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>OpenSeadragon Gigapan Example</title>
+    <link rel='stylesheet' 
+          type='text/css'
+          media='screen'
+          href='./openseadragon/style.css'/>
+
+</head>
+
+<body>
+    <div id="gigapan_openseadragon1" 
+         class="openseadragon" >
+    </div>
+<script src="./openseadragon/openseadragon.min.js"></script>
+<script src="./openseadragon/openseadragon.gigapantilesource.js"></script>
+    <script type="text/javascript">
+    var viewer = OpenSeadragon({
+        id:                 "gigapan_openseadragon1",
+        prefixUrl:          "./openseadragon/images/",
+        navigatorSizeRatio: 0.5,
+        tileSources:   [{
+        	type: 'gigapan',
+//            tileSize: 256, // not necessary - GigapanTileSource assumes 256
+            tileOverlap: 0,
+            width:	74088,
+            height:	15816,
+            tilesUrl:	'http://tile155.gigapan.com/gigapans0/155637/tiles/'
+        }]
+    });
+    </script>
+</body>
+</html>
+
+
+
+
+
